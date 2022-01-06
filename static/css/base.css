@@ -1,0 +1,14 @@
+:root {
+    --orange-crayola: #FD6D33ff;
+    --phlox: #D002F2ff;
+    --sheen-green: #A1DE07ff;
+    --icterine: #FAF86Aff;
+    --black: #000000ff;
+    --white: #FFFFFFff;
+  }
+
+.header-text{
+    color: var(--icterine);
+    background-color: var(--orange-crayola);
+    text-shadow: var(--phlox) 0px 0px 5px;
+}
