@@ -1,0 +1,1 @@
+web: gunicorn hard-candy-resin-arts.wsgi:application
