@@ -1,14 +1,155 @@
 :root {
-    --orange-crayola: #FD6D33ff;
+    --orange-crayola: rgb(247, 108, 74);
     --phlox: #D002F2ff;
     --sheen-green: #A1DE07ff;
     --icterine: #FAF86Aff;
     --black: #000000ff;
     --white: #FFFFFFff;
-  }
+}
 
-.header-text{
+body{
+    background: beige;
+}
+
+#title{
+    font-size: 2.5rem;
+    padding-top: 5px;
+    color: var(--icterine);
+    text-shadow: var(--phlox) 0px 0px 5px;
+    margin: 0.5rem 0;
+}
+
+.navbar {
+    background: var(--orange-crayola);
+}
+
+#logo-nav {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-bottom: 7px;
+}
+
+.navbar-collapse{
+    justify-content: flex-end;
+}
+
+.nav-link{
+    font-size: 1.3rem;
+    color: beige!important;
+}
+
+.nav-link:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.logo{
+    padding: 0;
+}
+
+.flower-gif-2{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+/*---------Footer*/
+
+footer {
     color: var(--icterine);
     background-color: var(--orange-crayola);
     text-shadow: var(--phlox) 0px 0px 5px;
+}
+
+#about {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+#contact-info {
+    color: #e7c8ac;
+    text-shadow: var(--phlox) 0px 0px 5px;
+    margin: 0;
+    font-size: 3rem;
+}
+
+#about, #contact-box p {
+    font-size: 1.7rem;
+}
+
+#contact-box p a {
+    color: #e7c8ab;
+    letter-spacing: 3px;
+    text-shadow: var(--phlox) 0px 0px 5px;
+}
+
+.list-unstyled li {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px var(--phlox);
+    letter-spacing: 1px;
+}
+
+#social {
+    text-align: center;
+}
+
+#social-links {
+    list-style: none;
+    display: flex;
+    margin: auto;
+    padding: 0;
+}
+
+.social-link {
+    margin: auto;
+}
+
+/* Social Links styles & color change animation */
+
+#social-links li a i {
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 2.5em;
+    text-align: center;
+    color: var(--orange-crayola);
+    text-shadow: var(--phlox) 0px 0px 2px;
+    background: var(--icterine);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+#social-links li a i:hover {
+    animation-name: social-links-zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes social-links-zoom {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+
+    to {
+        transform: scale(1.3) rotate(360deg);
+    }
+}
+
+.no-bg {
+    background-color: unset;
+}
+
+@media (max-width: 1385px) {
+    #customer {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    #customer {
+        font-size: 1.2rem;
+    }
 }
