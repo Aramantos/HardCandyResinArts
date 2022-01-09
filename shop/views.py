@@ -1,3 +1,15 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Product
+
+
+def shop(request):
+    """ A view to return the shop page """
+
+    shop = Product.objects.all()
+
+    context = {
+        'shop': shop,
+    }
+
+    return render(request, 'shop/shop.html', context)

@@ -1,0 +1,33 @@
+:root {
+    --orange-crayola: rgb(247, 108, 74);
+    --phlox: #D002F2ff;
+    --sheen-green: #A1DE07ff;
+    --icterine: #FAF86Aff;
+    --black: #000000ff;
+    --white: #FFFFFFff;
+}
+
+.item-image,
+#item-image-info {
+    height: 50vh !important;
+}
+
+.card-body {
+    background-color: hsl(183deg 47% 64%);
+}
+
+.item-card-body {
+    font-size: x-large;
+    letter-spacing: 1px;
+    color: #f4f5db;
+    text-shadow: 2px 2px rgb(41 48 231);
+}
+
+.item-card-body p {
+    padding-bottom: 20px;
+}
+
+#item-details-container {
+    margin-top: 15px;
+    background-color: #faebd7a1;
+}

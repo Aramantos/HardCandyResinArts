@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}- Home{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'home/js/base.js' %}"></script>   
+{% endblock %}
+
 {% block content %}
     <div class="row ml-1 mr-1">
         <img class="flower-gif-1 col-6 col-md-4" src="https://giffiles.alphacoders.com/853/85355.gif" alt="flower">
