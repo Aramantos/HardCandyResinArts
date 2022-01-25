@@ -1,0 +1,44 @@
+:root {
+    --orange-crayola: rgb(247, 108, 74);
+    --phlox: #D002F2ff;
+    --sheen-green: #A1DE07ff;
+    --icterine: #FAF86Aff;
+    --black: #000000ff;
+    --white: #FFFFFFff;
+}
+
+#about{
+    font-size: 3.5rem;
+}
+
+#about-box {
+    margin-top: 3vh!important;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    background-color: var(--icterine);
+    margin: auto;
+}
+
+hr {
+    border-top: 4px solid var(--orange-crayola);
+}
+
+p {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 2px var(--orange-crayola);
+}
+
+.text-boxes {
+    background-color: var(--icterine);
+
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    transform: translate3d(0, 0, 0);
+}
+
+.text-boxes p,
+.text-boxes ul li {
+    font-size: 1.5rem;
+}
