@@ -65,11 +65,11 @@
                   <a class="nav-link" href="{% url 'shop' %}">Shop</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
                 <li class="list-inline-item">
                   <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
-                    <div class="text-center">
+                    <div>
                         <p class="my-0 d-none d-lg-block">
                             {% if grand_total %}
                                 ${{ grand_total|floatformat:2 }}
@@ -87,7 +87,7 @@
                     Account <i class="fas fa-user"></i> 
                   </a>
                   <a class="nav-link dropdown-toggle d-lg-none" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user"></i> 
+                    <i class="fas fa-user fa-lg"></i> 
                   </a>
                   <div class="dropdown-menu mr-5" aria-labelledby="navbarDropdownMenuLink">
                     {% if request.user.is_authenticated %}
@@ -97,8 +97,8 @@
                       <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                       <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                     {% else %}
-                      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                       <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                      <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                     {% endif %}
                   </div>
                 </li>
@@ -125,7 +125,7 @@
         <div class="pt-0 pt-lg-3 container-fluid">
             <div class="row text-center footer-top px-3">
                 <div class="col-12 col-md-6 mt-md-2">
-                    <p id="about" class="p-2">
+                    <p id="footer-about" class="p-2">
                       Epoxy resin and flowers, hand pressed, my designs, timeless and delicate pieces, as unique as the flower used to create it. 
                       Highest grade sterling silver stamped with 925 hallmark, resulting in high end, fashionable, hypoallergenic and durable items. 
                     </p>
