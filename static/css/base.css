@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 :root {
     --orange-crayola: rgb(247, 108, 74);
@@ -50,7 +50,10 @@ body{
 }
 
 .nav-link{
-    font-size: 1.3rem;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     color: beige!important;
 }
 
@@ -71,6 +74,20 @@ body{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+
+/* ---------Back to top button
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+} */
 
 /*---------Footer*/
 
@@ -160,6 +177,8 @@ footer {
 .no-bg {
     background-color: unset;
 }
+
+/*---------Media Queries*/
 
 @media (max-width: 1385px) {
     #customer {

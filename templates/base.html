@@ -7,7 +7,7 @@
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="UTF-8">
-        <meta name="description" content="Coding Bootcamp Python Project">
+        <meta name="description" content="Online Jewelry Store">
         <meta name="keywords" content="HTML, CSS, JavaScript, Python">
         <meta name="author" content="John Doyle">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -62,7 +62,7 @@
                   <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'shop' %}">Shop</a>
+                  <a class="nav-link" href="{% url 'shop_products' %}">Shop</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'about' %}">About</a>
@@ -94,7 +94,7 @@
                       {% if request.user.is_superuser %}
                         <a href="" class="dropdown-item">Product Management</a>
                       {% endif %}
-                      <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                      <a href="#" class="dropdown-item">My Profile</a>
                       <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                     {% else %}
                       <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
