@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
-from products.models import Product
+from shop.models import Product
 
 def basket_contents(request):
 
@@ -27,7 +27,7 @@ def basket_contents(request):
                 product_count += quantity
                 basket_items.append({
                     'item_id': item_id,
-                    'quantity': item_data,
+                    'quantity': quantity,
                     'product': product,
                     'size': size,
                 })
