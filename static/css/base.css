@@ -178,11 +178,36 @@ footer {
     background-color: unset;
 }
 
+#md-bag{
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: white 0 0 5px;
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
 /*---------Media Queries*/
 
 @media (max-width: 1385px) {
     #customer {
         font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1103px) {
+    #lg-bag, #lg-bag-no-ani {
+        display: block!important;
+    }
+    #md-bag, #md-bag-no-ani {
+        display: none!important;
     }
 }
 
@@ -201,6 +226,15 @@ footer {
 @media (max-width: 792px) {
     #title {
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #lg-bag, #lg-bag-no-ani {
+        display: none!important;
+    }
+    #md-bag, #md-bag-no-ani {
+        display: block!important;
     }
 }
 
