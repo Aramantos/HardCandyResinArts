@@ -36,6 +36,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
           integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
         </script>
+
+        <!-- Stripe -->
+        <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
       
     {% block extra_js %}
@@ -72,13 +75,13 @@
                     <div>
                       {% if grand_total %}
                         <p id="lg-bag" class="my-0 d-none">
-                          ${{ grand_total|floatformat:2 }}
+                          £{{ grand_total|floatformat:2 }}
                           <i class="fas fa-shopping-bag fa-lg"></i>
                         </p>
                         <i id="md-bag" class="fas fa-shopping-bag fa-lg"></i>
                       {% else %}
                         <p id="lg-bag-no-ani" class="my-0 d-none">
-                          $0.00
+                          £0.00
                           <i class="fas fa-shopping-bag fa-lg"></i>
                         </p>
                         <i id="md-bag-no-ani" class="fas fa-shopping-bag fa-lg"></i>
