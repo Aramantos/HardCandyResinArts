@@ -105,7 +105,7 @@ LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 
-WSGI_APPLICATION = 'hardcandyresinarts.wsgi.application'
+WSGI_APPLICATION = 'hard-candy-resin-arts.wsgi.application'
 
 
 # Database
