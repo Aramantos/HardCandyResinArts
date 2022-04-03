@@ -1,0 +1,30 @@
+Hello you facist pig!
+
+You have an order... you are actually gonna have to do some work...
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Here is what you gouged out of the customer for a sub par product...
+
+Order Total: ${{ order.order_total }}
+Delivery: ${{ order.delivery_cost }}
+Grand Total: ${{ order.grand_total }}
+
+Here is where you need to send it... make sure you spell it right!!!
+
+Shipping information
+{{ order.street_address1 }}
+{{ order.street_address2 }}
+{{ order.town_or_city }}
+{{ order.county }}
+{{ order.postcode }}
+{{ order.country }}
+
+
+List of country codes if neccesarry
+https://www.nationsonline.org/oneworld/country_code_list.htm
+
+If you need to reach out to the customer becuase you are terrible at your job...
+
+{{ order.email }}... be nice to them... for once...
