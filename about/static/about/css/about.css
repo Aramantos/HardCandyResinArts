@@ -1,11 +1,33 @@
-:root {
-    --orange-crayola: rgb(247, 108, 74);
-    --phlox: #D002F2ff;
-    --sheen-green: #A1DE07ff;
-    --icterine: #FAF86Aff;
-    --black: #000000ff;
-    --white: #FFFFFFff;
-}
+/* Colors from One */
+/* :root {
+    --primary: #222e3a;
+    --secondary: #229dc8;
+    --tertiary: #239cb0;
+    --comp1: #eedbd6;
+    --comp2: #c6c2b9;
+    --comp3: #90acb0;
+    --comp4: #38a294;
+} */
+
+/* Blue Mountain Jewelry Pallete */
+/* :root {
+    --primary: #b5b1a5;
+    --secondary: #2d9895;
+    --tertiary: #254f63;
+    --comp1: #b4b8b7;
+    --comp2: #11759f;
+    --comp3: #4b6f63;
+    --comp4: #5d6162;
+} */
+
+/* :root {
+    --primary: rgb(247, 108, 74);
+    --secondary: #D002F2ff;
+    --tertiary: #FAF86Aff;
+    --comp1: #A1DE07ff;
+    --comp2: #000000ff;
+    --comp3: #FFFFFFff;
+} */
 
 #about{
     font-size: 3.5rem;
@@ -15,22 +37,22 @@
     margin-top: 3vh!important;
     font-family: 'Dancing Script', cursive;
     font-size: 2rem;
-    background-color: var(--icterine);
+    background-color: var(--tertiary);
     margin: auto;
 }
 
 hr {
-    border-top: 4px solid var(--orange-crayola);
+    border-top: 4px solid var(--primary);
 }
 
 .about-text {
     font-size: 1.2rem;
     letter-spacing: 1px;
-    text-shadow: 0 0 2px var(--orange-crayola);
+    text-shadow: 0 0 2px var(--primary);
 }
 
 .text-boxes {
-    background-color: var(--icterine);
+    background-color: var(--tertiary);
 
     animation-name: shake;
     animation-duration: 1s;

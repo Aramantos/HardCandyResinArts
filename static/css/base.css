@@ -1,13 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
+/* Colors from One */
 :root {
-    --orange-crayola: rgb(247, 108, 74);
-    --phlox: #D002F2ff;
-    --sheen-green: #A1DE07ff;
-    --icterine: #FAF86Aff;
-    --black: #000000ff;
-    --white: #FFFFFFff;
+    --primary: #222e3a;
+    --secondary: #229dc8;
+    --tertiary: #239cb0;
+    --comp1: #eedbd6;
+    --comp2: #c6c2b9;
+    --comp3: #90acb0;
+    --comp4: #38a294;
 }
+
+/* Blue Mountain Jewelry Pallete */
+/* :root {
+    --primary: #b5b1a5;
+    --secondary: #2d9895;
+    --tertiary: #254f63;
+    --comp1: #b4b8b7;
+    --comp2: #11759f;
+    --comp3: #4b6f63;
+    --comp4: #5d6162;
+} */
+
+/* :root {
+    --primary: rgb(247, 108, 74);
+    --secondary: #D002F2ff;
+    --tertiary: #FAF86Aff;
+    --comp1: #A1DE07ff;
+    --comp2: #000000ff;
+    --comp3: #FFFFFFff;
+} */
 
 body{
     background: beige;
@@ -18,13 +40,13 @@ body{
     font-size: 2.5rem;
     font-weight: bolder;
     padding-top: 5px;
-    color: var(--icterine);
-    text-shadow: var(--phlox) 0px 0px 5px;
+    color: var(--tertiary);
+    text-shadow: var(--secondary) 0px 0px 5px;
     margin: 0.5rem 0;
 }
 
 .navbar {
-    background: var(--orange-crayola);
+    background: var(--primary);
 }
 
 .dropdown-menu {
@@ -54,7 +76,7 @@ body{
     font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: beige!important;
+    color: var(--comp1)!important;
 }
 
 .nav-link:hover {
@@ -63,7 +85,7 @@ body{
 }
 
 .navbar-toggler {
-    background: #fbf86a;;
+    background: var(--tertiary);
 }
 
 .logo{
@@ -164,9 +186,9 @@ body{
 /*---------Footer*/
 
 footer {
-    color: var(--icterine);
-    background-color: var(--orange-crayola);
-    text-shadow: var(--phlox) 0px 0px 5px;
+    color: var(--tertiary);
+    background-color: var(--primary);
+    text-shadow: var(--secondary) 0px 0px 5px;
 }
 
 #footer-about {
@@ -175,8 +197,8 @@ footer {
 }
 
 #contact-info {
-    color: #e7c8ac;
-    text-shadow: var(--phlox) 0px 0px 5px;
+    color: var(--comp1);
+    text-shadow: var(--secondary) 0px 0px 5px;
     margin: 0;
     font-size: 3rem;
 }
@@ -186,14 +208,14 @@ footer {
 }
 
 #contact-box p a {
-    color: #e7c8ab;
+    color: var(--comp1);
     letter-spacing: 3px;
-    text-shadow: var(--phlox) 0px 0px 5px;
+    text-shadow: var(--secondary) 0px 0px 5px;
 }
 
 .list-unstyled li {
     font-size: 1.2rem;
-    text-shadow: 2px 2px var(--phlox);
+    text-shadow: 2px 2px var(--secondary);
     letter-spacing: 1px;
 }
 
@@ -221,9 +243,9 @@ footer {
     border-radius: 50%;
     font-size: 2.5em;
     text-align: center;
-    color: var(--orange-crayola);
-    text-shadow: var(--phlox) 0px 0px 2px;
-    background: var(--icterine);
+    color: var(--primary);
+    text-shadow: var(--secondary) 0px 0px 2px;
+    background: var(--tertiary);
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
     -webkit-transition: all 0.35s ease-in-out;
