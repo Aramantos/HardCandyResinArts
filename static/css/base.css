@@ -31,11 +31,40 @@
     --comp3: #FFFFFFff;
 } */
 
-body{
-    background: beige;
+body {
+    background: var(--tertiary);
+    display: flex;
+    flex-direction: column;
 }
 
-#title{
+main {
+    flex: 1;
+}
+
+/* Buttons */
+
+.btn {
+    background-color: var(--primary);
+    color: aliceblue;
+}
+
+.btn:hover {
+    background-color: aliceblue;
+    color: var(--primary);
+}
+
+.update-link, .remove-link {
+    background-color: aliceblue;
+    padding: 0 5px;
+    border: 2px solid var(--secondary);
+    box-shadow: 0 0 2px var(--primary);
+    font-family: cursive;
+    font-size: larger;
+}
+
+/* Navbar */
+
+#title {
     font-family: 'Dancing Script', cursive;
     font-size: 2.5rem;
     font-weight: bolder;
@@ -50,13 +79,13 @@ body{
 }
 
 .dropdown-menu {
-    background: #eccdfd;
-    box-shadow: 5px 5px #a807f3;
+    background: var(--comp3);
+    box-shadow: 5px 5px var(--secondary);
 }
 
 .dropdown-item {
-    color: #a807f3;
-    text-shadow: #fbf86a 0px 0px 5px;
+    color: var(--primary);
+    text-shadow: var(--tertiary) 0px 0px 5px;
     font-size: 1.2rem;
 }
 
@@ -67,16 +96,16 @@ body{
     margin-bottom: 7px;
 }
 
-.navbar-collapse{
+.navbar-collapse {
     justify-content: flex-end;
 }
 
-.nav-link{
+.nav-link {
     font-family: 'Dancing Script', cursive;
     font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: var(--comp1)!important;
+    color: var(--comp1) !important;
 }
 
 .nav-link:hover {
@@ -88,11 +117,11 @@ body{
     background: var(--tertiary);
 }
 
-.logo{
+.logo {
     padding: 0;
 }
 
-.flower-gif-2{
+.flower-gif-2 {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
@@ -134,10 +163,10 @@ body{
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -193,6 +222,7 @@ footer {
 
 #footer-about {
     font-size: 1.5rem;
+    margin-top: 3vh;
     margin-top: 0.5rem;
 }
 
@@ -203,7 +233,8 @@ footer {
     font-size: 3rem;
 }
 
-#about, #contact-box p {
+#about,
+#contact-box p {
     font-size: 1.7rem;
 }
 
@@ -225,13 +256,15 @@ footer {
 
 #social-links {
     list-style: none;
-    display: flex;
     margin: auto;
     padding: 0;
+    display: flex;
 }
 
 .social-link {
     margin: auto;
+    display: inline-block;
+    padding: 0 10px;
 }
 
 /* Social Links styles & color change animation */
@@ -241,10 +274,9 @@ footer {
     margin-bottom: 0;
     padding: 10px;
     border-radius: 50%;
-    font-size: 2.5em;
+    font-size: 1.25em;
     text-align: center;
     color: var(--primary);
-    text-shadow: var(--secondary) 0px 0px 2px;
     background: var(--tertiary);
     transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
@@ -272,7 +304,7 @@ footer {
     background-color: unset;
 }
 
-#md-bag{
+#md-bag {
     animation: glow 3s ease-in-out infinite;
 }
 
@@ -280,9 +312,11 @@ footer {
     0% {
         text-shadow: none;
     }
+
     50% {
         text-shadow: white 0 0 5px;
     }
+
     100% {
         text-shadow: none;
     }
@@ -291,8 +325,10 @@ footer {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -310,8 +346,8 @@ footer {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -328,18 +364,19 @@ footer {
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
     background-color: #222;
     border-color: #222;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+    color: #17a2b8;
+    /* text-info */
 }
 
 /*---------Media Queries*/
@@ -351,11 +388,15 @@ footer {
 }
 
 @media (min-width: 1103px) {
-    #lg-bag, #lg-bag-no-ani {
-        display: block!important;
+
+    #lg-bag,
+    #lg-bag-no-ani {
+        display: block !important;
     }
-    #md-bag, #md-bag-no-ani {
-        display: none!important;
+
+    #md-bag,
+    #md-bag-no-ani {
+        display: none !important;
     }
 }
 
@@ -377,12 +418,36 @@ footer {
     }
 }
 
+@media (max-width: 769px) {
+    .nav-link {
+        text-align: end;
+    }
+    .nav-icon {
+        margin: 10px 0;
+        text-align: center!important;
+    }
+    #profile-drop {
+        margin: 0 !important;
+        width: 10%;
+        float: right;
+    }
+}
+
+@media (max-width: 767px) {
+    #profile-drop {
+        min-width: 15vw;
+    }
+}
 @media (max-width: 768px) {
-    #lg-bag, #lg-bag-no-ani {
+
+    #lg-bag,
+    #lg-bag-no-ani {
         display: none!important;
     }
-    #md-bag, #md-bag-no-ani {
-        display: block!important;
+
+    #md-bag,
+    #md-bag-no-ani {
+        display: block !important;
     }
 }
 

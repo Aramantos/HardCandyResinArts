@@ -48,16 +48,13 @@ hr {
 .about-text {
     font-size: 1.2rem;
     letter-spacing: 1px;
-    text-shadow: 0 0 2px var(--primary);
+    /* text-shadow: 0 0 2px var(--primary); */
 }
 
 .text-boxes {
-    background-color: var(--tertiary);
-
-    animation-name: shake;
-    animation-duration: 1s;
-    animation-delay: 3s;
-    transform: translate3d(0, 0, 0);
+    background-color: var(--comp2);
+    border-radius: 10px;
+    border: groove;
 }
 
 .text-boxes p,

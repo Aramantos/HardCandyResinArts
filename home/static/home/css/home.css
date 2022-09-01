@@ -28,3 +28,7 @@
     --comp2: #000000ff;
     --comp3: #FFFFFFff;
 } */
+
+main {
+    margin: 7vh 0;
+}
