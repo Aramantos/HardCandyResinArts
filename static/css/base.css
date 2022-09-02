@@ -79,14 +79,19 @@ main {
 }
 
 .dropdown-menu {
-    background: var(--comp3);
-    box-shadow: 5px 5px var(--secondary);
+    background: aliceblue;
+    box-shadow: 5px 5px var(--primary);
 }
 
 .dropdown-item {
     color: var(--primary);
-    text-shadow: var(--tertiary) 0px 0px 5px;
     font-size: 1.2rem;
+    /* font-family: 'Dancing Script', cursive; */
+    font-size: large;
+}
+
+.dropdown-item:hover {
+    background-color: #dddddd;
 }
 
 #logo-nav {
@@ -379,6 +384,14 @@ footer {
     /* text-info */
 }
 
+.profile-icon:hover {
+    text-decoration: none;
+}
+
+.hr {
+    z-index: -9999;
+}
+
 /*---------Media Queries*/
 
 @media (max-width: 1385px) {
@@ -412,6 +425,12 @@ footer {
     }
 }
 
+@media (max-width: 991px) {
+    #profile-drop {
+        left: -8vw;
+    }
+}
+
 @media (max-width: 792px) {
     #title {
         font-size: 1.8rem;
@@ -435,7 +454,7 @@ footer {
 
 @media (max-width: 767px) {
     #profile-drop {
-        min-width: 15vw;
+        min-width: 158px;
     }
 }
 @media (max-width: 768px) {

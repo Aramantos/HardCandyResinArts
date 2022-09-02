@@ -99,3 +99,8 @@ select option[value=""] {
 .text-info:hover {
   color: aliceblue !important;
 }
+
+.order-confirmation-wrapper {
+  background: aliceblue;
+  border: ridge 25px var(--primary);
+}
