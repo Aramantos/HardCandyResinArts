@@ -48,7 +48,7 @@ def shop_products(request):
     current_sorting = f'{sort}_{direction}'
 
     context = {
-        'shop': products,
+        'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,

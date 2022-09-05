@@ -1,8 +1,16 @@
 from django.shortcuts import render
 
+from shop.models import Product
+
 # Create your views here.
 
 def index(request):
     """ A view to return the home page """
 
-    return render(request, 'home/index.html')
+    products = Product.objects.all()
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'home/index.html', context)

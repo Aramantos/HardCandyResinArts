@@ -3,6 +3,8 @@
 
 {% block extra_title %}- Home{% endblock %}
 
+{% block home %}active{% endblock %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
 {% endblock %}
@@ -12,9 +14,37 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row ml-1 mr-1">
-        <img class="flower-gif-1 col-6 col-md-4" src="https://giffiles.alphacoders.com/853/85355.gif" alt="flower">
-        <img class="logo col-6 col-md-4" src="https://i.etsystatic.com/isla/4d9a20/45114409/isla_500x500.45114409_f1c94p2y.jpg?version=0" alt="logo">
-        <img class="flower-gif-2 col-4 d-none d-md-block" src="https://giffiles.alphacoders.com/853/85355.gif" alt="flower">
+  <div class="container bg-light m-auto w-50 border-custom">
+    <!-- <img class="flower-gif-1 col-6 col-md-4" src="https://giffiles.alphacoders.com/853/85355.gif" alt="flower"> -->
+    <img class="logo card-img-top img-fluid" src="{% static 'Blue Mountain Logo NB.png' %}" alt="logo">
+    <!-- <img class="flower-gif-2 col-4 d-none d-md-block" src="https://giffiles.alphacoders.com/853/85355.gif" alt="flower"> -->
+  </div>
+  <div class="container bg-light p-3 my-3 mx-auto w-50 border-custom">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {% for product in products %}
+          <li data-target="#carouselExampleCaptions" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.counter0 == 0 %}active{% endif %}"></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for product in products %}
+          <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
+            <img class="carousel-img" src="{{ product.image.url }}" class="card-img-top img-fluid" alt="...">
+            <div class="carousel-caption d-none d-md-block bg-light border-custom">
+              <h5><a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h5>
+              <p>{{ product.price }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
     </div>
+  </div>
 {% endblock %} 

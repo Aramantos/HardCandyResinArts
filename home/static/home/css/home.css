@@ -32,3 +32,27 @@
 main {
     margin: 7vh 0;
 }
+
+.carousel-caption {
+    color: var(--tertiary);
+    padding-bottom: 0;
+}
+
+.carousel-indicators {
+    bottom: auto;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    margin: auto;
+    height: 5vh;
+    background: #103e59;
+}
+
+.carousel-img {
+    height: 50vh;
+    width: 100%;
+}
+
+.border-custom {
+    border: #2079ad 5px ridge;
+}

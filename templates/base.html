@@ -5,6 +5,9 @@
     <head>
 
     {% block meta %}
+        <!-- Favicon -->
+        <link rel="icon" sizes="192x192" href="{% static 'favicon.png' %}" type="image/x-icon">
+
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="UTF-8">
         <meta name="description" content="Online Jewelry Store">
@@ -44,16 +47,16 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Hard Candy Resin Arts {% block extra_title %}{% endblock %}</title>
+    <title>Blue Mountain Jewelry {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header>
         <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="{% url 'home' %}">
+            <a class="navbar-brand d-flex" href="{% url 'home' %}">
+              <img id="logo-nav" class="logo col-6 col-md-4" src="{% static 'Logo.png' %}" alt="logo">
                 <h1 id="title" class="display-4">
-                    <img id="logo-nav" class="logo col-6 col-md-4" src="https://i.etsystatic.com/isla/4d9a20/45114409/isla_500x500.45114409_f1c94p2y.jpg?version=0" alt="logo">
-                    Hard Candy Resin Arts 
-                    <i class="fas fa-heart"></i>
+                    Blue Mountain Jewelry
+                    <!-- <i class="fas fa-heart"></i> -->
                 </h1>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,16 +64,16 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
-                <li class="nav-item active">
+                <li class="nav-item {% block home %}{% endblock %}">
                   <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% block shop %}{% endblock %}">
                   <a class="nav-link" href="{% url 'shop_products' %}">Shop</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% block about %}{% endblock %}">
                   <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
-                <li class="nav-item nav-icon">
+                <li class="nav-item nav-icon {% block basket %}{% endblock %}">
                   <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_basket' %}">
                     <div>
                       {% if grand_total %}
@@ -89,7 +92,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="nav-item nav-icon dropdown">
+                <li class="nav-item nav-icon {% block profile %}{% endblock %} dropdown">
                   <a class="nav-link dropdown-toggle d-none d-lg-block" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Account <i class="fas fa-user"></i> 
                   </a>

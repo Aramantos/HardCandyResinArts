@@ -1,5 +1,5 @@
 /* Colors from One */
-:root {
+/* :root {
     --primary: #222e3a;
     --secondary: #229dc8;
     --tertiary: #239cb0;
@@ -7,7 +7,7 @@
     --comp2: #c6c2b9;
     --comp3: #90acb0;
     --comp4: #38a294;
-}
+} */
 
 /* Blue Mountain Jewelry Pallete */
 /* :root {
@@ -94,7 +94,7 @@
 }
 
 hr {
-    border-top: 4px solid var(--primary);
+    border-top: 4px solid var(--secondary);
 }
 
 .item-image,
@@ -140,10 +140,25 @@ hr {
 
 #shop-navbar {
     border-radius: 10px;
+    background-color: var(--secondary);
 }
 
 .shop-navbar-items{
     justify-content: unset;
+}
+
+.shop-nav-item{
+    color: var(--primary)!important;
+}
+
+.shop-nav-item:hover{
+    color: var(--primary)!important;
+}
+
+.nav-hyphen {
+    color: aliceblue;
+    margin: auto;
+    font-weight: bolder;
 }
 
 .category, .details {
@@ -173,6 +188,18 @@ hr {
 .no-size {
     width: 75%;
     margin: 0 auto 10px;
+}
+
+#sort-selector {
+    
+}
+
+#sort-selector option {
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-right: 10px;
+    padding-right: 10px;
 }
 
 /* footer {
