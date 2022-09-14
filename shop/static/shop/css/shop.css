@@ -71,7 +71,7 @@
 }
 
 .flip-card-back {
-    background-color: var(--comp3);
+    background-color: var(--primary);
     color: white;
     height: 50vh;
     transform: rotateY(180deg);
@@ -106,12 +106,12 @@ hr {
     height: 50vh;
     font-size: x-large;
     letter-spacing: 1px;
-    color: var(--primary);
-    text-shadow: 2px 2px var(--comp2);
+    color: var(--secondary);
+    text-shadow: 2px 2px #dddedf;
 }
 
 .item-card-body hr {
-    border-top: 2px solid var(--comp1);
+    border-top: 2px solid var(--tertiary);
 }
 
 #item-details-container {
@@ -121,12 +121,12 @@ hr {
 }
 
 .increment-qty, .decrement-qty {
-    background-color: var(--primary);
-    color: aliceblue;
+    color: var(--primary);
+    background-color: var(--tertiary);
 }
 
 .increment-qty:hover, .decrement-qty:hover {
-    background-color: aliceblue;
+    background-color: #006199;
     color: var(--primary);
 }
 
@@ -162,13 +162,17 @@ hr {
 }
 
 .category, .details {
-    color: aliceblue;
-    text-shadow: 2px 2px var(--primary);
+    color: var(--secondary);
+    text-shadow: 2px 2px #dddedf;
 }
 
 .category:hover, .details:hover {
-    color: var(--primary);
-    text-shadow: 2px 2px aliceblue;
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+#price {
+    text-shadow: 2px 2px #dddedf;
 }
 
 #shop-title, #shop-navbar {
@@ -177,17 +181,32 @@ hr {
 
 #qty-shop {
     margin-top: 3px;
+    background: var(--tertiary);
+    color: var(--primary);
 }
 
 .product-size {
     margin: 3px auto 0;
     text-align: center;
     width: 80%;
+    background: var(--tertiary);
+    color: var(--primary);
 }
 
 .no-size {
     width: 75%;
     margin: 0 auto 10px;
+}
+
+#add-basket{
+    background-color: var(--tertiary);
+    color: var(--primary);
+    font-weight: 600;
+    text-shadow: 0 0 3px black;
+}
+
+#add-basket:hover{
+    background-color: #006199;
 }
 
 #sort-selector {

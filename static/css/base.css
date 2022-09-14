@@ -14,7 +14,7 @@
 }
 /* Colors from One */
 :root {
-    --primary: #fffffe;
+    --primary: #f8f9fa;
     --secondary: #222e3a;
     --tertiary: #38b6ff;
     --comp1: #eedbd6;
@@ -55,25 +55,42 @@
 } */
 
 body {
-    background: var(--tertiary);
+    background-color: var(--primary);
+    /* background: var(--tertiary); */
     display: flex;
     flex-direction: column;
+}
+
+hr {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    border: .5px solid rgba(0,0,0,.4);
 }
 
 main {
     flex: 1;
 }
 
+header{
+    border-bottom: 1px solid rgba(0,0,0,.4);
+}
+
+footer {
+    border-top: 1px solid rgba(0,0,0,.4);
+}
+
 /* Buttons */
 
 .btn {
-    background-color: var(--primary);
-    color: aliceblue;
+    color: var(--primary)!important;
+    background-color: var(--tertiary)!important;
+    border: none;
+    border-radius: 0;
 }
 
 .btn:hover {
-    background-color: aliceblue;
-    color: var(--primary);
+    background-color: #006199!important;
+    color: var(--primary)!important;
 }
 
 .update-link, .remove-link {
@@ -81,7 +98,7 @@ main {
     padding: 0 5px;
     border: 2px solid var(--secondary);
     box-shadow: 0 0 2px var(--primary);
-    font-family: cursive;
+    font-family: cursive, sans-serif;
     font-size: larger;
 }
 
@@ -103,7 +120,7 @@ main {
 }
 
 #title {
-    font-family: 'Barlow', sans-serif;
+    /* font-family: 'Barlow', sans-serif; */
     font-size: 2.5rem;
     font-weight: bolder;
     color: var(--tertiary);
@@ -112,19 +129,19 @@ main {
 }
 
 .dropdown-menu {
-    background: aliceblue;
-    box-shadow: 5px 5px var(--primary);
+    font-family: 'DM Serif Display';
+    background: var(--tertiary);
+    box-shadow: 5px 5px var(--secondary1);
 }
 
 .dropdown-item {
     color: var(--primary);
-    font-size: 1.2rem;
-    /* font-family: 'Barlow', sans-serif; */
-    font-size: large;
+    font-size: 1.4rem;
 }
 
 .dropdown-item:hover {
-    background-color: #dddddd;
+    color: var(--tertiary);
+    background-color: var(--primary);
 }
 
 
@@ -134,6 +151,7 @@ main {
 
 .nav-link {
     font-family: 'Barlow', sans-serif;
+    font-family: 'DM Serif Display', sans-serif;
     font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: 1px;
@@ -252,30 +270,20 @@ footer {
     /* text-shadow: var(--secondary) 0px 0px 5px; */
 }
 
-#footer-about {
-    font-size: 1.5rem;
-    margin-top: 3vh;
-    margin-top: 0.5rem;
-    color: rgba(0,0,0,.5);
-}
-
-#contact-info {
+.contact-info {
     color: var(--tertiary);
-    /* text-shadow: var(--secondary) 0px 0px 5px; */
     margin: 0;
-    font-size: 3rem;
+    margin-top: 0.6rem;
+    font-size: 1.8rem;
+    font-family: 'DM Serif Display', sans-serif;
 }
 
-#about,
-#contact-box p {
-    font-size: 1.7rem;
-    color: rgba(0,0,0,.7);
+.contact-info a {
+    color: #38b6ff;
 }
 
-#contact-box p a {
-    color: rgba(0,0,0,.7);
-    letter-spacing: 3px;
-    /* text-shadow: var(--secondary) 0px 0px 5px; */
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 .list-unstyled li {
@@ -339,8 +347,21 @@ footer {
     background-color: unset;
 }
 
+#lg-bag {
+    color: rgba(0,0,0,.5);
+}
+
+#lg-bag:hover {
+    color: rgba(0,0,0,.7);
+}
+
 #md-bag {
+    color: rgba(0,0,0,.5);
     animation: glow 3s ease-in-out infinite;
+}
+
+#md-bag:hover {
+    color: rgba(0,0,0,.7);
 }
 
 @keyframes glow {
@@ -349,7 +370,7 @@ footer {
     }
 
     50% {
-        text-shadow: white 0 0 4px;
+        text-shadow: rgba(0,0,0,.5) 0 0 2px;
     }
 
     100% {
@@ -470,6 +491,34 @@ footer {
     z-index: -9999;
 }
 
+#allauth-bg {
+    background-color: aliceblue;
+    margin: 2vh auto;
+    text-align: center;
+}
+
+.allauth-form-inner-content h2 {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 3.5rem;
+}
+
+.allauth-form-inner-content button, .allauth-form-inner-content input[type='submit'] {
+    color: initial;
+    background-color: initial;
+    border: none;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content input {
+    width: 30%;
+    text-align: center;
+    margin: 5px auto 0;
+}
+
+#id_remember {
+    width: unset;
+}
+
 /*---------Media Queries*/
 
 @media (max-width: 1385px) {
@@ -509,13 +558,16 @@ footer {
     }
 }
 
+@media (max-width: 991px) {
+    .contact-info {
+        letter-spacing: 2px;
+    }
+}
+
 @media (max-width: 920px) {
     #title {
         font-size: 2rem;
     }
-}
-
-@media (max-width: 767px) {
 }
 
 @media (max-width: 767px) {

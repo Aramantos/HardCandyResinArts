@@ -54,7 +54,7 @@
         <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand d-flex" href="{% url 'home' %}">
               <img id="logo-nav" class="logo col-6 col-md-4" src="{% static 'Logo.png' %}" alt="logo">
-                <h1 id="title" class="display-4">
+                <h1 id="title" class="display-4 dm-serif">
                     Blue Mountain Jewelry
                     <!-- <i class="fas fa-heart"></i> -->
                 </h1>
@@ -150,15 +150,10 @@
       </script>
     {% endblock %}
 
-    <footer>
+    <footer class="mb-2">
         <div class="container-fluid">
-            <div class="row text-center footer-top px-3">
-                <div class="col-12 col-lg-6 mt-md-2">
-                    <p id="footer-about" class="p-2">
-                      Epoxy resin and flowers, hand pressed, my designs, timeless and delicate pieces, as unique as the flower used to create it. 
-                      Highest grade sterling silver stamped with 925 hallmark, resulting in high end, fashionable, hypoallergenic and durable items. 
-                    </p>
-                    <div class="row py-3 py-lg-2">
+            <div class="row text-center">
+                <div class="col-12 col-lg-4 mt-md-2">
                       <div class="col-12 container text-center">
                           <div id="social">
                           <ul id="social-links">
@@ -191,23 +186,17 @@
                                   </a>
                               </li>
                           </ul>
-                      </div>
-                      </div>
+                    </div>
                   </div>
                 </div>
-                <hr>
-                <div id="contact-box" class="col-12 col-lg-6 text-center pt-2">
-                    <h4 id="contact-info" class="uppercase mb-3">Contact info</h4>
-                    <p><i class="fas fa-globe-africa mr-3"></i>
-                        Planet Sol, Solar System Gamma, Milkyway
-                    </p>
-                    <p><i class="fas fa-phone-alt mr-3"></i><a href="tel:+1234567890"> +44 77 85 85 85</a></p>
-                    <p><i class="fas fa-envelope mr-3"></i><a href="mailto:shakesonthebeach@gmail.com"> mcdermoz@tcd.ie</a></p>
+                <div class="col-12 col-lg-4">
+                  <p class="contact-info"><i class="fas fa-phone-alt mr-2"></i><a href="tel:+1234567890"> +44 77 85 85 85</a></p>
                 </div>
-                <hr>
+                <div class="col-12 col-lg-4">
+                  <p class="contact-info"><i class="fas fa-envelope mr-2"></i><a href="mailto:mcdermoz@tcd.ie"> mcdermoz@tcd.ie</a></p>                  
+                </div>
             </div>
         </div>
     </footer>
-    
   </body>
 </html>
