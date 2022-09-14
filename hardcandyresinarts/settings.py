@@ -95,7 +95,13 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
+# SMTP Config
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'bluemountainjewelry@gmail.com'
+EMAIL_HOST_PASSWORD = ""
+EMAIL_USE_TLS = True
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True

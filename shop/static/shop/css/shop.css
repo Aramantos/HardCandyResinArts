@@ -123,11 +123,17 @@ hr {
 .increment-qty, .decrement-qty {
     color: var(--primary);
     background-color: var(--tertiary);
+    font-size: 1rem;
 }
 
 .increment-qty:hover, .decrement-qty:hover {
     background-color: #006199;
     color: var(--primary);
+    /* font-size: 1rem; */
+}
+
+#search-bar {
+    height: auto;
 }
 
 #search-button {
@@ -201,8 +207,6 @@ hr {
 #add-basket{
     background-color: var(--tertiary);
     color: var(--primary);
-    font-weight: 600;
-    text-shadow: 0 0 3px black;
 }
 
 #add-basket:hover{

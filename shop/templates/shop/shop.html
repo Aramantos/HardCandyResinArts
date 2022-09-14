@@ -22,12 +22,12 @@
     <div class="container-fluid">
         <div class="row">
             <div id="shop-title" class="col-12 col-md-6 text-center">
-                <h1 class="logo-font text-shadow">
+                <h1 class="logo-font text-shadow mt-2">
                     <a id="shop-text" href="{% url 'shop_products' %}">
                         Shop
                     </a>
                 </h1>
-                <hr class="w-75 mt-3">
+                <hr class="w-75">
             </div>
         </div>
         <div class="container header-container">
@@ -55,7 +55,7 @@
                         <div id="search-bar" class="col-4 py-1 py-lg-0 m-auto">
                             <form method="GET" action="{% url 'shop_products' %}" autocomplete="off">
                                 <div class="input-group w-100">
-                                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                                    <input id="search-bar" class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                                     <div class="input-group-append">
                                         <button id="search-button" class="form-control btn btn-black border border-black rounded-0" type="submit">
                                             <span class="icon">

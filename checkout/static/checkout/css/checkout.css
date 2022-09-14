@@ -93,7 +93,7 @@ select option[value=""] {
 }
 
 #card-charge {
-  border: 3px solid var(--primary);
+  border: 3px solid #dc3545;
   background: aliceblue;
   margin: auto;
   width: 90%;
