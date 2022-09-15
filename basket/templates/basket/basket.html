@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block content %}
-<div id="basket-container" class="container mb-2">
+<div id="basket-container" class="container mb-2 border-custom">
     <div class="row">
         <div class="col">
             <hr>
@@ -121,13 +121,17 @@
                     </table>
                 </div>
             {% else %}
-                <p class="lead mb-5">Your basket is empty.</p>
-                <a href="{% url 'shop_products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
+                <p id="empty-basket" >Your basket is empty.</p>
+                <div class="row">
+                    <div class="col-12 text-center mb-2">
+                        <a href="{% url 'shop_products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                    </div>
+                </div>
             {% endif %}
         </div>
     </div>

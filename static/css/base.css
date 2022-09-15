@@ -2,19 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Barlow:wght@100&family=DM+Serif+Display&display=swap');
 
 .barlow {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Barlow', sans-serif!important;
 }
 
 .barlow-semi {
-    font-family: 'Barlow Semi Condensec', sans-serif;
+    font-family: 'Barlow Semi Condensec', sans-serif!important;
 }
 
 .dm-serif {
-    font-family: 'DM Serif Display', serif;
+    font-family: 'DM Serif Display', serif!important;
 }
 
 .dance {
-    font-family: 'Dancing Script', sans-serif;
+    font-family: 'Dancing Script', sans-serif!important;
 }
 /* Colors from One */
 :root {
@@ -65,6 +65,7 @@ body {
     flex-direction: column;
     font-family: 'DM Serif Display', serif;
     font-size: 1.2rem;
+    /* min-height: 100vh; */
 }
 
 hr {
@@ -85,6 +86,7 @@ main {
 
 .border-custom {
     border: #2079ad 5px ridge;
+    background-color: aliceblue;
 }
 
 /* Buttons */

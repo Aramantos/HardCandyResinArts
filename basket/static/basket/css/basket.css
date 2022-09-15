@@ -19,3 +19,9 @@
     text-align: center;
     font-size: 3.5rem;
 }
+
+#empty-basket {
+    font-family: 'DM Serif Display', serif!important;
+    font-size: 1.5rem;
+    text-align: center;
+}
