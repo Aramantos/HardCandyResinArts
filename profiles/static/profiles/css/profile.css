@@ -1,0 +1,49 @@
+#profile-container {
+    background-color: aliceblue;
+}
+
+.order-history {
+    max-height: 416px; /* height of profile form + submit button */
+    overflow-y: auto;
+}
+
+#profile-update-form .form-control {
+    color: #000;
+    text-align: center;
+    width: 100%;
+}
+
+#profile-update-form input::placeholder {
+    color: #aab7c4;
+}
+
+#profile-update-form input {
+    width: 100%;
+    margin: 2px 0;
+}
+
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+    margin-top: 5px;
+    width: 99%;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
+
+#update {
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+.table {
+    background-color: var(--primary1)!important;
+    color: var(--primary)!important;
+}
+
+.table a {
+    color: bisque;
+}

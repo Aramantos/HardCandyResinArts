@@ -12,6 +12,10 @@
 .dm-serif {
     font-family: 'DM Serif Display', serif;
 }
+
+.dance {
+    font-family: 'Dancing Script', sans-serif;
+}
 /* Colors from One */
 :root {
     --primary: #f8f9fa;
@@ -73,12 +77,14 @@ main {
     flex: 1;
 }
 
-header{
-    border-bottom: 1px solid rgba(0,0,0,.4);
+.logo-font {
+    font-family: 'Dancing Script';
+    text-align: center;
+    font-size: 3.5rem;
 }
 
-footer {
-    border-top: 1px solid rgba(0,0,0,.4);
+.border-custom {
+    border: #2079ad 5px ridge;
 }
 
 /* Buttons */
@@ -108,8 +114,13 @@ footer {
 
 /* Navbar */
 
+header{
+    background-color: #fffffe;
+    border-bottom: 1px solid rgba(0,0,0,.4);
+}
+
 .navbar {
-    background: var(--primary);
+    background-color: #fffffe;
     padding: 5px;
 }
 
@@ -172,7 +183,7 @@ footer {
 }
 
 .logo {
-    padding: 0;
+    height: 528px;
 }
 
 .flower-gif-2 {
@@ -213,6 +224,18 @@ footer {
 
 .toast-capper {
     height: 2px;
+}
+
+.toast-header {
+    font-size: 1.4rem;
+}
+
+.toast-body {
+    font-size: 1.3rem;
+    letter-spacing: .2px;
+    font-family: "Barlow";
+    font-weight: bolder;
+    overflow: auto;
 }
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
@@ -270,14 +293,15 @@ footer {
 
 footer {
     color: var(--tertiary);
-    background-color: var(--primary);
-    /* text-shadow: var(--secondary) 0px 0px 5px; */
+    background-color: #fffffe;
+    border-top: 1px solid rgba(0,0,0,.4);
+    padding-bottom: 0.5rem!important;
 }
 
 .contact-info {
     color: var(--tertiary);
     margin: 0;
-    margin-top: 0.6rem;
+    margin-top: 0.8rem;
     font-size: 1.8rem;
     font-family: 'DM Serif Display', sans-serif;
 }
@@ -542,7 +566,7 @@ footer {
     }
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 1215px) {
 
     #lg-bag,
     #lg-bag-no-ani {
@@ -561,10 +585,10 @@ footer {
     }
 }
 
-@media (max-width: 1025px) {
-    /* #title {
+@media (max-width: 1064px) {
+    #title {
         font-size: 2rem;
-    } */
+    }
 }
 
 @media (max-width: 1020px) {
@@ -576,12 +600,6 @@ footer {
 @media (max-width: 991px) {
     .contact-info {
         letter-spacing: 2px;
-    }
-}
-
-@media (max-width: 920px) {
-    #title {
-        font-size: 2rem;
     }
 }
 

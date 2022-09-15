@@ -39,6 +39,7 @@
     font-size: 2rem;
     background-color: var(--tertiary);
     margin: auto;
+    border-radius: 10px;
 }
 
 hr {
@@ -52,9 +53,11 @@ hr {
 }
 
 .text-boxes {
-    background-color: var(--comp2);
+    background-color: aliceblue;
     border-radius: 10px;
     border: groove;
+    color: #2f87bb;
+    text-shadow: 1px 1px #cdcdcd;
 }
 
 .text-boxes p,

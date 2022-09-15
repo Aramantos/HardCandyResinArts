@@ -33,6 +33,10 @@ main {
     margin: 7vh 0;
 }
 
+.home-container {
+    height: 575px;
+}
+
 .carousel-caption {
     color: var(--tertiary);
     padding-bottom: 0;
@@ -49,10 +53,6 @@ main {
 }
 
 .carousel-img {
-    height: 50vh;
+    height: 528px;
     width: 100%;
-}
-
-.border-custom {
-    border: #2079ad 5px ridge;
 }
