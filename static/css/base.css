@@ -142,7 +142,7 @@ header{
     font-weight: bolder;
     color: var(--tertiary);
     /* text-shadow: var(--secondary) 0px 0px 5px; */
-    margin: auto;
+    margin: auto 0;
 }
 
 .dropdown-menu {
@@ -605,6 +605,15 @@ footer {
     }
 }
 
+@media (max-width: 860px) {
+    #title {
+        font-size: 1.7rem;
+    }
+    .nav-link {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 767px) {
     .nav-link {
         text-align: end;
@@ -621,6 +630,15 @@ footer {
     #profile-drop {
         min-width: 158px;
     }
+    #lg-bag,
+    #lg-bag-no-ani {
+        display: block !important;
+    }
+
+    #md-bag,
+    #md-bag-no-ani {
+        display: none !important;
+    }
 }
 @media (max-width: 768px) {
 
@@ -635,6 +653,12 @@ footer {
     }
 }
 
+@media (max-width: 555px) {
+    #title {
+        font-size: 1.5rem;
+    }
+}
+
 @media (max-width: 515px) {
     #logo-nav {
         display: none;
@@ -646,3 +670,10 @@ footer {
         font-size: 1.6rem;
     }
 }
+
+@media (max-width: 360px) {
+    #title {
+        font-size: 1.4rem;
+    }
+}
+

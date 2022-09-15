@@ -101,6 +101,7 @@ hr {
 .item-image,
 #item-image-info {
     height: 50vh !important;
+    max-width: 560px;
 }
 
 .item-card-body {
@@ -118,7 +119,6 @@ hr {
 #item-details-container {
     width: 90%;
     margin: 15px auto;
-    background-color: var(--comp3);
 }
 
 .increment-qty, .decrement-qty {
