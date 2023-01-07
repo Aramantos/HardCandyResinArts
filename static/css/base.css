@@ -16,7 +16,9 @@
 .dance {
     font-family: 'Dancing Script', sans-serif!important;
 }
+
 /* Colors from One */
+
 :root {
     --primary: #f8f9fa;
     --secondary: #222e3a;
@@ -28,6 +30,7 @@
 }
 
 /* Colors from One */
+
 :root {
     --primary1: #222e3a;
     --secondary1: #229dc8;
@@ -59,13 +62,14 @@
 } */
 
 body {
+    background: url('/static/IMG_0782.JPG') no-repeat center center fixed;
     background-color: var(--primary);
     /* background: var(--tertiary); */
     display: flex;
     flex-direction: column;
     font-family: 'DM Serif Display', serif;
     font-size: 1.2rem;
-    /* min-height: 100vh; */
+    min-height: 100vh;
 }
 
 hr {

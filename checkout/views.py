@@ -179,8 +179,8 @@ def checkout_success(request, order_number):
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    # send_confirmation_email(order)
-    # send_order_email(order)
+    send_confirmation_email(order)
+    send_order_email(order)
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
@@ -196,44 +196,44 @@ def checkout_success(request, order_number):
 
     return render(request, template, context)
 
-# def send_confirmation_email(order):
-#     """
-#     Send email confirmation to customer
-#     """
-#     cust_email = order.email
+def send_confirmation_email(order):
+    """
+    Send email confirmation to customer
+    """
+    cust_email = order.email
 
-#     subject = render_to_string(
-#         'checkout/confirmation_emails/confirmation_email_subject.txt',
-#         {'order': order})
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order})
 
-#     body = render_to_string(
-#         'checkout/confirmation_emails/confirmation_email_body.txt',
-#         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
-#     send_mail(
-#         subject,
-#         body,
-#         settings.DEFAULT_FROM_EMAIL,
-#         [cust_email]
-#     )
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
 
-# def send_order_email(order):
-#     """
-#     Send order confirmation to owner
-#     """
-#     cust_email = order.email
+def send_order_email(order):
+    """
+    Send order confirmation to owner
+    """
+    cust_email = order.email
 
-#     subject = render_to_string(
-#         'checkout/confirmation_emails/order_email_subject.txt',
-#         {'order': order})
+    subject = render_to_string(
+        'checkout/confirmation_emails/order_email_subject.txt',
+        {'order': order})
 
-#     body = render_to_string(
-#         'checkout/confirmation_emails/order_email_body.txt',
-#         {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    body = render_to_string(
+        'checkout/confirmation_emails/order_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
 
-#     send_mail(
-#         subject,
-#         body,
-#         settings.DEFAULT_FROM_EMAIL,
-#         [cust_email]
-#     )
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
